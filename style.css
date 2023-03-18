@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&family=Oleo+Script+Swash+Caps&family=Open+Sans&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color: #181818;
+}
+
+/* Header css start  */
+
+.navwrapper{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  color: aliceblue;
+  /* padding: 0px 200px; */
+  height: 55px;
+}
+
+.logo-img {
+  height: 45px;
+  margin-left: 5px;
+}
+.hamburg {
+  padding: 9px;
+  /* background-color: #616161; */
+}
+.hamburg:hover {
+  background-color: #212f3d;
+  border-radius: 50%;
+}
+.bar {
+  margin-left: 35px;
+}
+
+input {
+  border-radius: 20px;
+  width: 400px;
+  outline-color: rgb(38, 38, 196);
+  outline-width: thin;
+}
+input::placeholder {
+  padding: 10px;
+  font-size: 14px;
+}
+input[type="text"] {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.search-btn {
+  position: relative;
+  left: -30px;
+  border-radius: none;
+  outline-style: none;
+  border: none;
+}
+
+.fa-microphone {
+  border-radius: 100%;
+  padding: 10px;
+  margin-right: 50px;
+}
+
+.fa-microphone:hover {
+  background-color: #5c5a5a;
+}
+
+.color-white {
+  color: aliceblue;
+}
+
+.profile {
+  display: flex;
+  text-align: center;
+  width: 150px;
+  justify-content: space-around;
+  position: relative;
+}
+
+.three-div {
+  margin-right: 20px;
+}
+
+.tool {
+  cursor: pointer;
+}
+
+/* tooltip  */
+
+/* mic tooltip  */
+
+.micro-container {
+  position: relative;
+  /* background-color: aqua; */
+}
+
+.tooltip-mic {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  font-size: 10px;
+  background-color: #616a6b;
+  color: #fff;
+
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.micro-container:hover .tooltip-mic {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-1 {
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  font-size: 10px;
+  background-color: #616a6b;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tooltip-2 {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  font-size: 10px;
+  background-color: #616a6b;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tooltip-3 {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font-size: 10px;
+  background-color: #616a6b;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* tooltip hover css    */
+.sec-tool:hover .tooltip-2 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.first-tool:hover .tooltip-1 {
+  visibility: visible;
+  opacity: 1;
+}
+
+.third-tool:hover .tooltip-3 {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* nav media Queary mobile  */
+
+
+
+@media only screen and (max-width: 500px) {
+  input {
+    width: 150px;
+    /* margin-right: 100px; */
+    height: 22px;
+  }
+  .search-btn {
+    font-size: 10px;
+  }
+  .video-content{
+    margin-left: -35px;
+  }
+  .nav-search-div{
+    display: none;
+    
+  }
+ 
+}
+
+/* nav midia Querty ipad  */
+
+@media only screen and (min-width: 500px) {
+  input {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .video-content{
+    margin-left: -35px;
+  }
+  
+}
+
+@media only screen and (min-width: 819px) {
+    .sidebar{
+        width: 10%;
+    }
+    .video-content{
+        margin-left: -35px;
+    }
+    .container-fluid{
+      margin-left: 0px;
+    }
+    
+   
+}
+   
+
+@media only screen and (max-width: 620px) {
+  .profile {
+    display: none;
+  }
+
+
+
+  
+
+  
+}
+
+
+
+@media only screen and (min-width:800px) {
+    .video-content{
+        margin-left: 45px;
+    }
+
+    
+}
+
+
+/* sidebar csss start here  */
+
+.sidebar-main {
+  width: 100%;
+  display: flex;
+ 
+}
+/* .sidebar-dir{
+
+ } */
+
+.sidebar {
+  width: 8%;
+  background-color: #181818;
+  height: 100vh;
+  transition: 0.3s width;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 50px; /* Stay at the top */
+  left: 0;
+}
+
+/* onclick add class for witdh  */
+
+.inc {
+  width: 13%;
+}
+
+.home-home {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.home-short {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.home-sub {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.home-lib {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.home-down {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.home-remove {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+.home:hover {
+  background-color: #abadaf;
+  border-radius: 10px;
+}
+
+/* hr css  */
+hr {
+  height: 2px;
+  background-color: #ccc;
+  border: none;
+  display: none;
+}
+
+.hr-visible {
+  display: block;
+}
+
+/* sidebar icons  css */
+
+.home-icon {
+  color: #fff;
+}
+.home-content {
+  font-size: 10px;
+  color: #fff;
+}
+
+
+/* video text title slider  */
+.card{
+    margin-top: 20px;
+}
+.slider-items{
+    background-color: #5c5a5a;
+    color: white;
+    font-size: small;
+    padding: 2px 7px;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+
+
+
+
+
+/* video containt css start here  */
+
+
+.container-fluid {
+  width: 100%;
+  background-color: #212f3c;
+ 
+  
+
+}
+
+.video-content{
+   
+    padding-left: 60px;
+  
+}
+
+/* card css start here  */
+.card {
+  border-color: none;
+  /* height: 500px; */
+  cursor: pointer;
+}
+.card-text {
+  font-size: small;
+  text-overflow: ellipsis;
+}
+.card-title {
+  font-size: small;
+}
+.card-body {
+  background-color: #212f3c;
+  /* padding: 5px; */
+  margin-top: 0px;
+}
+
+.card-div {
+  margin-bottom: -15px;
+}
